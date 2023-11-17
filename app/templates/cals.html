@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+
+
+        #a {
+            text-align: center;
+            font-weight: bold;
+            
+            font-size: large;
+        }
+
+
+        #b {
+
+            text-align: center;
+        }
+
+        #c{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="{% url  'advcals'  %}" method="post">
+            {% csrf_token %}
+
+            <br>
+
+            <h1 style="text-align: center;">CALCULATOR</h1><br>
+
+            <div class="col4" id="a">
+                <label for="">Enter the first number</label><br><br>
+                <input type="number" name="number1"><br><br>
+                <label for="">Enter the second number</label><br><br>
+                <input type="number" name="number2"><br><br>
+            </div><br>
+            
+            <div class="col-4" id="b">
+                <select name="opr">
+                    <option value="select">Select Mathematical Operation</option>
+                    <option value="+">Addition[+]</option>
+                    <option value="-">Subtraction[-]</option>
+                    <option value="*">Multiplication[*]</option>
+                    <option value="/">Division[/]</option>
+                </select>
+            </div><br>
+
+            <div class="col-4" id="c">
+                <button type="submit" style="background-color:brown; color: white; border-radius: 20px;">RESULT</button><br><br>
+                <input type="text" value="{{Result}}"><br><br>
+                
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
